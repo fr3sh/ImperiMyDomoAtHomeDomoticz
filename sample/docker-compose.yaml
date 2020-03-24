@@ -1,0 +1,13 @@
+version: "2"
+services:
+  mydomo:
+    image: fr3sh12/imperi
+    container_name: imperi
+    environment:
+      - DOMO=http://192.168.88.240:8080   # if no volume mounted
+      - TZ=Europe/Warsaw
+    volumes:
+      - ./Imperi:/etc/mydomoathome/
+    ports:
+      - 3002:3002
+    restart: unless-stopped
