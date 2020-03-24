@@ -1,0 +1,24 @@
+
+
+debian install inside docker 
+
+apt-get update; 
+apt-get -y  install nodejs npm
+apt-get -y install wget nano sudo curl
+wget -qO - https://www.e-nef.com/domoticz/mdah/gpg.mykey | apt-key add -
+
+echo "deb https://www.e-nef.com/domoticz/mdah/ /" | tee -a /etc/apt/sources.list.d/mycustom.list
+apt-get update
+adduser fr3sh
+usermod -aG sudo fr3sh
+
+su fr3sh
+sudo apt-get install MyDomoAtHome 
+sudo nano /etc/mydomoathome/config.json
+
+sudo service mydomoathome restart
+
+
+
+
+
