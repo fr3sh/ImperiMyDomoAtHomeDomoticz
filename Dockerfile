@@ -15,6 +15,6 @@ VOLUME /etc/mydomoathome/
 #sudo nano /etc/mydomoathome/config.json
 EXPOSE 3002
 RUN sudo service mydomoathome restart
-CMD sudo service mydomoathome start && tail -F ./error.log
+CMD sudo service mydomoathome start && tail -F /dev/null
 #ENTRYPOINT ["tail", "-f", "/dev/null"]
 
