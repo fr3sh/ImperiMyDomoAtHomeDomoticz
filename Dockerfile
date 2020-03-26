@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM arm32v7/debian
 RUN apt-get update && apt-get -y  install wget nano sudo curl nodejs npm 
 RUN wget -qO - https://www.e-nef.com/domoticz/mdah/gpg.mykey | apt-key add -
 RUN echo "deb https://www.e-nef.com/domoticz/mdah/ /" | tee -a /etc/apt/sources.list.d/mycustom.list
